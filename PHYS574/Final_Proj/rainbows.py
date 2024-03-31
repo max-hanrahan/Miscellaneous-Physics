@@ -2,7 +2,7 @@ from manim import *
 from manim_slides import Slide
 from math import pi, sqrt
 import numpy as np
-class Reflection(Scene):
+class Reflection(Slide):
     def construct(self):
         theta = ValueTracker(np.arctan(1/3)) # an increasing number, not, strictly speaking, an angle
         midplane = Line(start = (-6,0,0), end = (6,0,0))
@@ -43,14 +43,14 @@ class Reflection(Scene):
             "{ reflection}": BLUE})
         self.add(midplane)
         self.add(normal)
-        self.play(GrowArrow(in_arrow))
+        self.play(Create(in_arrow))
         in_arrow.add_updater(
             lambda m: 
             m.become(
                 # I know what follows is awful but this was the only method I tried that worked.
                 Arrow(start = (-(sqrt(40)*np.cos(theta.get_value())), (sqrt(40)*np.sin(theta.get_value())), 0), end = inc_finish)
             ))
-        self.play(GrowArrow(out_arrow))
+        self.play(Create(out_arrow))
         out_arrow.add_updater(
             lambda m:
             m.become(
@@ -68,7 +68,7 @@ class Reflection(Scene):
         self.wait(0.3)
         self.pause()
 
-class Snell(Scene):
+class Snell(Slide):
     def construct(self):
         theta = ValueTracker(np.arctan(1/3)) 
         theta2 = ValueTracker((np.sin(0.75*np.sin(theta.get_value())))) # the refracted angle's value
@@ -107,7 +107,7 @@ class Snell(Scene):
             lambda m: m.move_to(right_arc).shift(.165*RIGHT+.8*DOWN))
         self.add(midplane, normal, in_arrow, left_arc, label_1)
         self.stop()
-        self.play(GrowArrow(out_arrow))
+        self.play(Create(out_arrow))
         in_arrow.add_updater(
             lambda m: 
             m.become(
@@ -128,7 +128,7 @@ class Snell(Scene):
         self.wait(0.3)
         self.pause()
 
-class SnellBreakDown(Scene):
+class SnellBreakDown(Slide):
     def construct(self):
         initial_snell = MathTex('n_{1}\\sin\\theta_{1} = n_{2}\\sin\\theta_{2}')
         number_snell = MathTex('1.00\\sin\\theta_{1} \\approx 1.33\\sin\\theta_{2}')
@@ -142,7 +142,7 @@ class SnellBreakDown(Scene):
     def stop(self):
         self.wait(0.3)
         self.pause()
-class Plot(Scene):
+class Plot(Slide):
     CONFIG = {
         "y_max" : 30,
         "y_min" : 0,
@@ -173,7 +173,7 @@ class Plot(Scene):
         )
         self.stop()
         vert_line = self.get_vertical_line_to_graph(180/PI*np.arcsin(np.sqrt(5/12)), graph, color=YELLOW).set_opacity(0)
-        self.play(GrowArrow(vert_line))
+        self.play(Create(vert_line))
         max_point = Dot(color = RED).move_to(vert_line.get_end())
         self.play(FadeIn(max_point))
         red_arrow = Arrow(start = 3*UP, end = max_point.get_center()+UP*.1, color = RED)
@@ -187,7 +187,7 @@ class Plot(Scene):
             lambda m:m.move_to(vert_line.get_end()))
         alpha_param = dot_x_pos.get_value()/self.x_max
         tan_line = TangentLine(vmob = graph, alpha = alpha_param, color = RED, length = 2)
-        self.play(GrowArrow(tan_line))
+        self.play(Create(tan_line))
         tan_line.add_updater(
             lambda m: m.become(TangentLine(vmob = graph, alpha = dot_x_pos.get_value()/self.x_max, color = RED, length = 2))
             )
@@ -198,7 +198,7 @@ class Plot(Scene):
     def stop(self):
         self.wait(0.3)
         self.pause()
-class Eqs(Scene):
+class Eqs(Slide):
     #TODO: add waits EVERYWHERE
     def construct(self):
         dpdb = MathTex('d\\phi/ d\\beta = 0').shift(2*UP)
@@ -208,10 +208,10 @@ class Eqs(Scene):
         sub = MathTex('4 = \\frac{\\frac{16}{9}(1-\\sin^{2}\\beta)}{1- \\frac{16}{9}\\sin^{2}\\beta}}')
         nofrac = MathTex('4[\\frac{16}{9}(1- \\sin^{2}\\beta)] = (1-\\frac{16}{9}\\sin^{2}\\beta)')
         ellipses = MathTex('...').shift(1.5*DOWN)
-        penult_u = MathTex('\\sin\\beta_{\\MathText{max}} = \\sqrt{\\frac{5}{12}}').shift(UP)
-        penult_d = MathTex('\\implies \\beta_{\\MathText{max}} \\approx 40.2^{\\circ}')
-        final_phi = MathTex('\\implies \\phi_{\\MathText{max}} \\approx 21.0^{\\circ}').shift(DOWN)
-        # two_phi = MathTex('2\\phi_{\\MathText{max}} \\approx 42^{\\circ}').scale(2).set_color_by_gradient(RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE)
+        penult_u = MathTex('\\sin\\beta_{\\text{max}} = \\sqrt{\\frac{5}{12}}').shift(UP)
+        penult_d = MathTex('\\implies \\beta_{\\text{max}} \\approx 40.2^{\\circ}')
+        final_phi = MathTex('\\implies \\phi_{\\text{max}} \\approx 21.0^{\\circ}').shift(DOWN)
+        # two_phi = MathTex('2\\phi_{\\text{max}} \\approx 42^{\\circ}').scale(2).set_color_by_gradient(RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE)
         self.play(Write(dpdb))
         self.stop()
         self.play(Transform(dpdb, gross))
@@ -242,7 +242,7 @@ class Eqs(Scene):
 # this function and the following class is copied directly from TheoremofBeethoven: 
 # https://github.com/Elteoremadebeethoven/MC-TB/blob/master/Tools/Intersection/intersection.py#L13
 # His code is open source, but I thought I should mention that. 
-# the purpose of putting it here is to make the next few Scenes easier
+# the purpose of putting it here is to make the next few Slides easier
 def Range(in_val,end_val,step=1):
     return list(np.arange(in_val,end_val+step,step))
 class GetIntersections:
@@ -281,7 +281,7 @@ class GetIntersections:
                 if len(intersections) == 0 and distance_between_points < tolerance:
                     intersections.append(average_point)
         return intersections
-class Reprise(Scene, GetIntersections):
+class Reprise(Slide, GetIntersections):
     def construct(self):
         # This is where the fun begins
         drop = Circle(radius = 2, color = WHITE).shift(1.5*RIGHT)
@@ -356,12 +356,12 @@ class Reprise(Scene, GetIntersections):
         snell3 = MathTex('\\phi = 2\\beta - \\arcsin(\\frac{4}{3} \\sin\\beta)').move_to((-4,0,0))
         self.play(FadeIn(drop))
         for arrow, line in tupled_list:
-            self.play(GrowArrow(line), FadeIn(arrow, run_time = 2))
-        self.play(GrowArrow(normal))
-        self.play(GrowArrow(normal2)) # could maybe combine these two lines
+            self.play(Create(line), FadeIn(arrow, run_time = 2))
+        self.play(Create(normal))
+        self.play(Create(normal2)) # could maybe combine these two lines
         self.play(FadeIn(bisector))
-        self.play(GrowArrow(horizon))
-        self.play(GrowArrow(horizon2))
+        self.play(Create(horizon))
+        self.play(Create(horizon2))
         self.play(FadeIn(phi_0))
         self.play(FadeIn(phi_1))
         up_line = Line(start = in_ray.get_start(), end = in_ray.get_end())
@@ -377,7 +377,7 @@ class Reprise(Scene, GetIntersections):
             angle = helpful_arrow_up.get_angle() - helpful_arrow_down.get_angle(), 
             color = GREEN)
         helpful_label = MathTex('2\\phi').move_to(helpful_arc.get_center() + 0.5*LEFT)
-        self.play(GrowArrow(helpful_arrow_up), GrowArrow(helpful_arrow_down))
+        self.play(Create(helpful_arrow_up), Create(helpful_arrow_down))
         self.play(Create(helpful_arc))
         self.play(Write(helpful_label))
         self.stop()
@@ -385,7 +385,7 @@ class Reprise(Scene, GetIntersections):
     def stop(self):
         self.wait(0.3)
         self.pause()
-class ManyLines(Scene, GetIntersections):
+class ManyLines(Slide, GetIntersections):
     def construct(self):
         # todo (maybe?): correct the refraction angle 
         drop = Circle(radius = 2, color = WHITE).shift(1.5*RIGHT).rotate(PI)
@@ -409,10 +409,10 @@ class ManyLines(Scene, GetIntersections):
             refrac.set_angle(reflec.get_angle() + np.arcsin(4/3*np.sin(reflec.get_angle())))
             line_list = [line0, new_line, reflec, refrac]
             for arrow in line_list:
-                self.play(GrowArrow(arrow.set_color(RED)))
+                self.play(Create(arrow.set_color(RED)))
             self.add(line0)
         self.stop()
-class ManyLines2(Scene, GetIntersections):
+class ManyLines2(Slide, GetIntersections):
     def construct(self):
         # this should be exactly the same as the previous class but with different y-values in the for loop
         drop = Circle(radius = 2, color = WHITE).shift(1.5*RIGHT)
@@ -433,7 +433,7 @@ class ManyLines2(Scene, GetIntersections):
             refrac = Line(start = reflec.get_end())
             refrac.set_angle(reflec.get_angle() + np.arcsin(4/3*np.sin(reflec.get_angle())))
             self.add(drop)
-            self.play(GrowArrow(line0), GrowArrow(new_line), GrowArrow(reflec), GrowArrow(refrac))
+            self.play(Create(line0), Create(new_line), Create(reflec), Create(refrac))
             self.add(line0)
         self.stop()
     def stop(self):
@@ -476,19 +476,19 @@ class PinkFloyd(Slide, GetIntersections):
         self.next_slide()
         self.play(FadeIn(line0))
         self.next_slide()
-        # I tried to find a neater way to do this but it seems impossible since GrowArrow takes only one argument
+        # I tried to find a neater way to do this but it seems impossible since Create takes only one argument
         self.play(*[Create(_) for _ in new_line_list])        
         self.next_slide()
-        # self.play(*[GrowArrow(_) for _ in reflec_list])        
-        # self.stop()
-        # self.play(*[GrowArrow(_) for _ in refrac_list])        
-        # self.stop()
+        self.play(*[Create(_) for _ in reflec_list])        
+        self.next_slide()
+        self.play(*[Create(_) for _ in refrac_list])        
+        self.next_slide()
         # self.stop()
 
     def stop(self):
         self.wait(0.3)
         self.pause()
-class DoubleRainbow(Scene, GetIntersections):
+class DoubleRainbow(Slide, GetIntersections):
     def construct(self):
         drop = Circle(radius = 2, color = WHITE).shift(1.5*RIGHT)
         self.add(drop)
@@ -525,7 +525,8 @@ class DoubleRainbow(Scene, GetIntersections):
         phi_1_label = MathTex('\\phi').move_to(phi_1).scale(0.6).shift(LEFT*.25 + 0.1*DOWN)
         normal_list = []
         for arrow in arrow_list:
-            self.play(GrowArrow(arrow))
+            self.play(Create(arrow))
+            self.next_slide()
             normal = Line(start = arrow.get_start(), end = drop.get_center())
             normal.scale(1.8)
             normal = Line(start = normal.get_start(), end = drop.get_center())
@@ -552,26 +553,41 @@ class DoubleRainbow(Scene, GetIntersections):
         # ahh, almost done. Now I will create the last equations:
         snell = MathTex('\\sin(3\\beta - 90^{\\circ} + \\phi) = \\frac{4}{3}\\sin(\\beta)').shift(4*LEFT).scale(0.8)
         phi_eq = MathTex('\\implies \\phi = 90^{\\circ} - 3\\beta + \\arcsin(\\frac{4}{3}\\beta)').shift(1.5*RIGHT).scale(0.8)
-        phi_min = MathTex('\\phi_{\\MathText{min}} \\approx 25.4^{\\circ}').shift(DOWN)
-        very_last_phi = MathTex('2\\phi_{\\MathText{min}} \\approx 51^{\\circ}').shift(DOWN)
+        phi_min = MathTex('\\phi_{\\text{min}} \\approx 25.4^{\\circ}').shift(DOWN)
+        very_last_phi = MathTex('2\\phi_{\\text{min}} \\approx 51^{\\circ}').shift(DOWN)
         # super dumb but at least it worked:
-        very_last_but_bigger = MathTex('2\\phi_{\\MathText{min}} \\approx 51^{\\circ}').scale(2)
-        self.play(GrowArrow(horizon))
-        self.play(GrowArrow(up_horizon), GrowArrow(down_horizon))
-        self.play(GrowArrow(normal_list[1]), GrowArrow(normal_list[2]), GrowArrow(normal_list[3]), GrowArrow(normal_list[4]))
+        very_last_but_bigger = MathTex('2\\phi_{\\text{min}} \\approx 51^{\\circ}').scale(2)
+        self.play(Create(horizon))
+        self.next_slide()
+        self.play(Create(up_horizon), Create(down_horizon))
+        self.next_slide()
+        self.play(Create(normal_list[1]), Create(normal_list[2]), Create(normal_list[3]), Create(normal_list[4]))
+        self.next_slide()
         self.play(Create(phi_0), Create(beta_0), FadeIn(beta_0_label), FadeIn(phi_0_label))
+        self.next_slide()
         self.play(Create(phi_1), Create(beta_1), FadeIn(beta_1_label), FadeIn(phi_1_label))
+        self.next_slide()
         self.play(Create(beta_2), FadeIn(beta_2_label))
+        self.next_slide()
         self.play(Create(beta_3), FadeIn(beta_3_label))
+        self.next_slide()
         self.play(FadeIn(perp_bi))
+        self.next_slide()
         self.play(Create(red_angle))
-        self.play(GrowArrow(red_arrow), Write(red_label))
+        self.next_slide()
+        self.play(Create(red_arrow), Write(red_label))
+        self.next_slide()
         self.play(Create(green_angle))
-        self.play(GrowArrow(green_arrow), Write(green_label))
+        self.next_slide()
+        self.play(Create(green_arrow), Write(green_label))
+        self.next_slide()
         self.play(Create(purple_angle), Write(purple_label))
+        self.next_slide()
         self.play(Create(purple_angle_2), Write(purple_label_2))
+        self.next_slide()
         self.stop()
         self.play(Write(snell))
+        self.next_slide()
         normal_list.pop(0)
         arrow_group = VGroup(*normal_list)
         everything_group = VGroup(
@@ -580,11 +596,17 @@ class DoubleRainbow(Scene, GetIntersections):
             inc_above, int_down, int_above, red_angle, green_angle, purple_angle, purple_angle_2, red_arrow, 
             green_arrow, red_label, green_label, purple_label, purple_label_2, int_side)
         self.play(FadeOut(everything_group))
+        self.next_slide()
         self.play(FadeIn(phi_eq))
+        self.next_slide()
         self.play(FadeIn(phi_min))
+        self.next_slide()
         self.play(FadeOut(snell), FadeOut(phi_eq))
+        self.next_slide()
         self.play(Transform(phi_min, very_last_phi))
+        self.next_slide()
         self.play(Transform(phi_min, very_last_but_bigger))
+        self.next_slide()
         self.play(ApplyMethod(phi_min.set_color_by_gradient, 
             RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE, 
             RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE))
@@ -592,7 +614,7 @@ class DoubleRainbow(Scene, GetIntersections):
     def stop(self):
         self.wait(0.3)
         self.pause()
-class BigPicture(Scene, GetIntersections):
+class BigPicture(Slide, GetIntersections):
     def construct(self):
         drop = Circle(radius = .8, color = WHITE).shift(0.5*RIGHT +2.8*UP)
         worldline = Line(start = (-7, -2, 0), end = (7,-2,0), color = GREEN)
@@ -634,13 +656,13 @@ class BigPicture(Scene, GetIntersections):
             refrac_list.append(refrac)
         self.play(FadeIn(worldline), FadeIn(flowers), FadeIn(sticc))
         self.play(FadeIn(drop))
-        self.play(GrowArrow(line0))
+        self.play(Create(line0))
         self.stop()
-        self.play(*[GrowArrow(_) for _ in new_line_list])        
+        self.play(*[Create(_) for _ in new_line_list])        
         self.stop()
-        self.play(*[GrowArrow(_) for _ in reflec_list])        
+        self.play(*[Create(_) for _ in reflec_list])        
         self.stop()
-        self.play(*[GrowArrow(_) for _ in refrac_list])        
+        self.play(*[Create(_) for _ in refrac_list])        
         self.stop()
         Dashed_1 = DashedLine(start = line0.get_end(), end = (10, 3.6, 0))
         big_invisible_purple = DashedLine(start = refrac_list[2].get_end(), end = (9, 3.6,0))
