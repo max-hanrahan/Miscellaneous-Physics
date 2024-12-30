@@ -1,0 +1,1115 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     50253,       1107]
+NotebookOptionsPosition[     49305,       1083]
+NotebookOutlinePosition[     49846,       1101]
+CellTagsIndexPosition[     49803,       1098]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Integrate", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"2", " ", "*", " ", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"\[Sigma]", "^", "2"}], " ", "-", " ", 
+          RowBox[{"y", "^", "2"}]}], ")"}], "^", 
+        RowBox[{"(", 
+         RowBox[{"1", "/", "2"}], ")"}]}]}], " ", "-", " ", 
+      SubscriptBox["r", "12"]}], ")"}], " ", "*", " ", "2", " ", "\[Pi]", " ",
+     "y"}], " ", ",", " ", 
+   RowBox[{"{", 
+    RowBox[{"y", ",", " ", "0", ",", " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"\[Sigma]", "^", "2"}], " ", "-", " ", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           SubscriptBox["r", "12"], " ", "/", "2"}], ")"}], "^", 
+         RowBox[{"(", "2", ")"}]}]}], ")"}], "^", 
+      RowBox[{"(", 
+       RowBox[{"1", "/", "2"}], ")"}]}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.9396618830053062`*^9, 3.9396620789709263`*^9}, {
+  3.939662708771295*^9, 3.939662708883106*^9}},
+ CellLabel->
+  "In[218]:=",ExpressionUUID->"55bf5c88-5b7a-4cd5-93be-cbd62ee00411"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{
+     FractionBox["1", "12"], " ", "\[Pi]", " ", 
+     RowBox[{"(", 
+       RowBox[{
+         RowBox[{"16", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+              SuperscriptBox["\[Sigma]", "2"], ")"}], 
+            RowBox[{"3", "/", "2"}]]}], "-", 
+         RowBox[{"12", " ", 
+           SuperscriptBox["\[Sigma]", "2"], " ", 
+           SubscriptBox["r", "12"]}], "+", 
+         RowBox[{"3", " ", 
+           SubsuperscriptBox["r", "12", "3"]}], "-", 
+         RowBox[{"2", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+              SubsuperscriptBox["r", "12", "2"], ")"}], 
+            RowBox[{"3", "/", "2"}]]}]}], ")"}]}], 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       StyleBox[
+        TagBox[
+         TooltipBox["\"condition\"", 
+          TagBox[
+           RowBox[{
+             RowBox[{
+               SuperscriptBox[
+                RowBox[{"Im", "[", "\[Sigma]", "]"}], "2"], "\[LessEqual]", 
+               SuperscriptBox[
+                RowBox[{"Re", "[", "\[Sigma]", "]"}], "2"]}], "&&", 
+             RowBox[{
+               SuperscriptBox[
+                RowBox[{"Im", "[", 
+                  SubscriptBox["r", "12"], "]"}], "2"], "\[LessEqual]", 
+               SuperscriptBox[
+                RowBox[{"Re", "[", 
+                  SubscriptBox["r", "12"], "]"}], "2"]}], "&&", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[Sigma]", "2"]}], "-", 
+                    SubsuperscriptBox["r", "12", "2"]}]]], "\[NotElement]", 
+                   TemplateBox[{}, "Reals"]}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"2", " ", 
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}]}], 
+                    "-", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}]}]]], 
+                    "]"}]}], ">", "1"}], "&&", 
+                    RowBox[{"(", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], 
+                    ")"}]}], ")"}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[Sigma]", "2"]}], "-", 
+                    SubsuperscriptBox["r", "12", "2"]}]]], "]"}], 
+                    "\[LessEqual]", 
+                    RowBox[{"-", 
+                    FractionBox["1", "2"]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["\[Sigma]", "2"], "-", 
+                    FractionBox[
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], 
+                    "4"]}]]], "]"}], "<", 
+                    RowBox[{"-", "1"}]}]}], ")"}]}], ")"}], "&&", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "\[NotElement]", 
+                   TemplateBox[{}, "Reals"]}], "||", 
+                 RowBox[{
+                   RowBox[{"2", " ", 
+                    RowBox[{"Re", "[", 
+                    SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "]"}]}], 
+                   "\[GreaterEqual]", "1"}], "||", 
+                 RowBox[{
+                   RowBox[{"Re", "[", 
+                    SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "]"}], 
+                   "\[LessEqual]", "0"}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], "\[GreaterEqual]", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "+", 
+                    RowBox[{
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], ")"}], " ", 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]}], "\[LessEqual]", 
+                    "0"}]}], ")"}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], "\[LessEqual]", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "+", 
+                    RowBox[{
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], ")"}], " ", 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]}], "\[GreaterEqual]", 
+                    "0"}]}], ")"}]}], ")"}]}], Short[#, 7]& ]], 
+         Annotation[#, 
+          Short[
+           And[
+           Im[$CellContext`\[Sigma]]^2 <= Re[$CellContext`\[Sigma]]^2, Im[
+               Subscript[$CellContext`r, 12]]^2 <= Re[
+               Subscript[$CellContext`r, 12]]^2, 
+            Or[
+             
+             NotElement[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                Subscript[$CellContext`r, 12]^2)^Rational[-1, 2], Reals], 
+             And[
+             2 Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                   Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] > 1, 
+              Or[
+              Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                   Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                  Rational[-1, 2]] >= 1, 
+               Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                   Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                  Rational[-1, 2]] == 0]], 
+             And[
+             Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                  Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] <= 
+              Rational[-1, 2], 
+              Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                  Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                 Rational[-1, 2]] < -1]], 
+            Or[
+             
+             NotElement[(
+               Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+                   Subscript[$CellContext`r, 12]] 
+                 Subscript[$CellContext`r, 12]]))^Rational[1, 2], Reals], 
+             2 Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                  Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - 
+                   Im[
+                    Subscript[$CellContext`r, 12]] 
+                   Subscript[$CellContext`r, 12]]))^Rational[1, 2]] >= 1, 
+             Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                 Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+                    Subscript[$CellContext`r, 12]] 
+                  Subscript[$CellContext`r, 12]]))^Rational[1, 2]] <= 0, 
+             And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] >= Im[
+                 Subscript[$CellContext`r, 12]] Re[
+                 Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+                   Subscript[$CellContext`r, 12]] + 
+                Re[$CellContext`\[Sigma]] Re[
+                   Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+                    Subscript[$CellContext`r, 12]] - 
+                 Im[$CellContext`\[Sigma]] Subscript[$CellContext`r, 12]] <= 
+              0], 
+             And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] <= Im[
+                 Subscript[$CellContext`r, 12]] Re[
+                 Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+                   Subscript[$CellContext`r, 12]] + 
+                Re[$CellContext`\[Sigma]] Re[
+                   Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+                    Subscript[$CellContext`r, 12]] - 
+                 Im[$CellContext`\[Sigma]] Subscript[$CellContext`r, 12]] >= 
+              0]]], 7], "Tooltip"]& ], "IconizedCustomName", StripOnInput -> 
+        False], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["And", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["11600", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]}, "IconizedObject"]], 
+    And[Im[$CellContext`\[Sigma]]^2 <= Re[$CellContext`\[Sigma]]^2, Im[
+        Subscript[$CellContext`r, 12]]^2 <= Re[
+        Subscript[$CellContext`r, 12]]^2, 
+     Or[
+      NotElement[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+         Subscript[$CellContext`r, 12]^2)^Rational[-1, 2], Reals], 
+      And[
+      2 Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+            Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] > 1, 
+       Or[
+       Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+            Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] >= 
+        1, Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+            Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] == 
+        0]], 
+      And[
+      Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+           Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] <= 
+       Rational[-1, 2], 
+       Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+           Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+          Rational[-1, 2]] < -1]], 
+     Or[
+      NotElement[(
+        Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+         Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+            Subscript[$CellContext`r, 12]] Subscript[$CellContext`r, 12]]))^
+       Rational[1, 2], Reals], 
+      2 Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+           Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+              Subscript[$CellContext`r, 12]] Subscript[$CellContext`r, 12]]))^
+         Rational[1, 2]] >= 1, 
+      Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+          Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+             Subscript[$CellContext`r, 12]] Subscript[$CellContext`r, 12]]))^
+        Rational[1, 2]] <= 0, 
+      And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] >= Im[
+          Subscript[$CellContext`r, 12]] Re[
+          Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+            Subscript[$CellContext`r, 12]] + Re[$CellContext`\[Sigma]] Re[
+            Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+             Subscript[$CellContext`r, 12]] - Im[$CellContext`\[Sigma]] 
+          Subscript[$CellContext`r, 12]] <= 0], 
+      And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] <= Im[
+          Subscript[$CellContext`r, 12]] Re[
+          Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+            Subscript[$CellContext`r, 12]] + Re[$CellContext`\[Sigma]] Re[
+            Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+             Subscript[$CellContext`r, 12]] - Im[$CellContext`\[Sigma]] 
+          Subscript[$CellContext`r, 12]] >= 0]]], SelectWithContents -> True, 
+    Selectable -> False]},
+  "ConditionalExpression"]], "Output",
+ CellChangeTimes->{3.939661983365329*^9, 3.9396621201800337`*^9, 
+  3.939662329094515*^9, 3.939662866648856*^9},
+ CellLabel->
+  "Out[218]=",ExpressionUUID->"320c5eab-a8d1-4752-9f4b-ba5572a6d040"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Simplify", "[", 
+  TemplateBox[{
+    RowBox[{
+      FractionBox["1", "12"], " ", "\[Pi]", " ", 
+      RowBox[{"(", 
+        RowBox[{
+          RowBox[{"16", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+               SuperscriptBox["\[Sigma]", "2"], ")"}], 
+             RowBox[{"3", "/", "2"}]]}], "-", 
+          RowBox[{"12", " ", 
+            SuperscriptBox["\[Sigma]", "2"], " ", 
+            SubscriptBox["r", "12"]}], "+", 
+          RowBox[{"3", " ", 
+            SubsuperscriptBox["r", "12", "3"]}], "-", 
+          RowBox[{"2", " ", 
+            SuperscriptBox[
+             RowBox[{"(", 
+               SubsuperscriptBox["r", "12", "2"], ")"}], 
+             RowBox[{"3", "/", "2"}]]}]}], ")"}]}], 
+    InterpretationBox[
+     DynamicModuleBox[{Typeset`open = False}, 
+      TemplateBox[{"Expression", 
+        StyleBox[
+         TagBox[
+          TooltipBox["\"condition\"", 
+           TagBox[
+            RowBox[{
+              RowBox[{
+                SuperscriptBox[
+                 RowBox[{"Im", "[", "\[Sigma]", "]"}], "2"], "\[LessEqual]", 
+                SuperscriptBox[
+                 RowBox[{"Re", "[", "\[Sigma]", "]"}], "2"]}], "&&", 
+              RowBox[{
+                SuperscriptBox[
+                 RowBox[{"Im", "[", 
+                   SubscriptBox["r", "12"], "]"}], "2"], "\[LessEqual]", 
+                SuperscriptBox[
+                 RowBox[{"Re", "[", 
+                   SubscriptBox["r", "12"], "]"}], "2"]}], "&&", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[Sigma]", "2"]}], "-", 
+                    SubsuperscriptBox["r", "12", "2"]}]]], "\[NotElement]", 
+                    TemplateBox[{}, "Reals"]}], "||", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"2", " ", 
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}]}], 
+                    "-", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}]}]]], 
+                    "]"}]}], ">", "1"}], "&&", 
+                    RowBox[{"(", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], 
+                    ")"}]}], ")"}], "||", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[Sigma]", "2"]}], "-", 
+                    SubsuperscriptBox["r", "12", "2"]}]]], "]"}], 
+                    "\[LessEqual]", 
+                    RowBox[{"-", 
+                    FractionBox["1", "2"]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["\[Sigma]", "2"], "-", 
+                    FractionBox[
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], 
+                    "4"]}]]], "]"}], "<", 
+                    RowBox[{"-", "1"}]}]}], ")"}]}], ")"}], "&&", 
+              RowBox[{"(", 
+                RowBox[{
+                  RowBox[{
+                    SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "\[NotElement]", 
+                    TemplateBox[{}, "Reals"]}], "||", 
+                  RowBox[{
+                    RowBox[{"2", " ", 
+                    RowBox[{"Re", "[", 
+                    SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "]"}]}], 
+                    "\[GreaterEqual]", "1"}], "||", 
+                  RowBox[{
+                    RowBox[{"Re", "[", 
+                    SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "]"}], 
+                    "\[LessEqual]", "0"}], "||", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], "\[GreaterEqual]", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "+", 
+                    RowBox[{
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], ")"}], " ", 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]}], "\[LessEqual]", 
+                    "0"}]}], ")"}], "||", 
+                  RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], "\[LessEqual]", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "+", 
+                    RowBox[{
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], ")"}], " ", 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]}], "\[GreaterEqual]", 
+                    "0"}]}], ")"}]}], ")"}]}], Short[#, 7]& ]], 
+          Annotation[#, 
+           Short[
+            And[Im[$CellContext`\[Sigma]]^2 <= Re[$CellContext`\[Sigma]]^2, Im[
+                Subscript[$CellContext`r, 12]]^2 <= Re[
+                Subscript[$CellContext`r, 12]]^2, 
+             Or[
+              
+              NotElement[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                 Subscript[$CellContext`r, 12]^2)^Rational[-1, 2], Reals], 
+              And[
+              2 Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                    Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] > 1, 
+               Or[
+               Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                    Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                   Rational[-1, 2]] >= 1, 
+                Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                    Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                   Rational[-1, 2]] == 0]], 
+              And[
+              Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                   Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] <= 
+               Rational[-1, 2], 
+               Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                   Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                  Rational[-1, 2]] < -1]], 
+             Or[
+              
+              NotElement[(
+                Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                 Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+                    Subscript[$CellContext`r, 12]] 
+                  Subscript[$CellContext`r, 12]]))^Rational[1, 2], Reals], 
+              2 Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                   Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+                    Subscript[$CellContext`r, 12]] 
+                    Subscript[$CellContext`r, 12]]))^Rational[1, 2]] >= 1, 
+              Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                  Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - 
+                   Im[
+                    Subscript[$CellContext`r, 12]] 
+                   Subscript[$CellContext`r, 12]]))^Rational[1, 2]] <= 0, 
+              
+              And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] >= 
+               Im[
+                  Subscript[$CellContext`r, 12]] Re[
+                  Subscript[$CellContext`r, 12]], (
+                 Im[$CellContext`\[Sigma]] Im[
+                    Subscript[$CellContext`r, 12]] + 
+                 Re[$CellContext`\[Sigma]] Re[
+                    Subscript[$CellContext`r, 12]]) 
+                Re[$CellContext`\[Sigma] Im[
+                    Subscript[$CellContext`r, 12]] - 
+                  Im[$CellContext`\[Sigma]] Subscript[$CellContext`r, 12]] <= 
+               0], 
+              
+              And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] <= 
+               Im[
+                  Subscript[$CellContext`r, 12]] Re[
+                  Subscript[$CellContext`r, 12]], (
+                 Im[$CellContext`\[Sigma]] Im[
+                    Subscript[$CellContext`r, 12]] + 
+                 Re[$CellContext`\[Sigma]] Re[
+                    Subscript[$CellContext`r, 12]]) 
+                Re[$CellContext`\[Sigma] Im[
+                    Subscript[$CellContext`r, 12]] - 
+                  Im[$CellContext`\[Sigma]] Subscript[$CellContext`r, 12]] >= 
+               0]]], 7], "Tooltip"]& ], "IconizedCustomName", StripOnInput -> 
+         False], 
+        GridBox[{{
+           RowBox[{
+             TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["And", "IconizedItem"]}]}, {
+           RowBox[{
+             TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+             TagBox["11600", "IconizedItem"]}]}}, 
+         GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+         "Column", 
+         GridBoxItemSize -> {
+          "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+        Dynamic[Typeset`open]}, "IconizedObject"]], 
+     And[Im[$CellContext`\[Sigma]]^2 <= Re[$CellContext`\[Sigma]]^2, Im[
+         Subscript[$CellContext`r, 12]]^2 <= Re[
+         Subscript[$CellContext`r, 12]]^2, 
+      Or[
+       NotElement[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+          Subscript[$CellContext`r, 12]^2)^Rational[-1, 2], Reals], 
+       And[
+       2 Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+             Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] > 1, 
+        Or[
+        Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+             Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+            Rational[-1, 2]] >= 1, 
+         Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+             Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+            Rational[-1, 2]] == 0]], 
+       And[
+       Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+            Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] <= 
+        Rational[-1, 2], 
+        Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+            Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+           Rational[-1, 2]] < -1]], 
+      Or[
+       NotElement[(
+         Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+          Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+             Subscript[$CellContext`r, 12]] Subscript[$CellContext`r, 12]]))^
+        Rational[1, 2], Reals], 
+       2 Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+            Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+               Subscript[$CellContext`r, 12]] 
+             Subscript[$CellContext`r, 12]]))^Rational[1, 2]] >= 1, 
+       Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+           Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+              Subscript[$CellContext`r, 12]] Subscript[$CellContext`r, 12]]))^
+         Rational[1, 2]] <= 0, 
+       And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] >= Im[
+           Subscript[$CellContext`r, 12]] Re[
+           Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+             Subscript[$CellContext`r, 12]] + Re[$CellContext`\[Sigma]] Re[
+             Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+              Subscript[$CellContext`r, 12]] - Im[$CellContext`\[Sigma]] 
+           Subscript[$CellContext`r, 12]] <= 0], 
+       And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] <= Im[
+           Subscript[$CellContext`r, 12]] Re[
+           Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+             Subscript[$CellContext`r, 12]] + Re[$CellContext`\[Sigma]] Re[
+             Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+              Subscript[$CellContext`r, 12]] - Im[$CellContext`\[Sigma]] 
+           Subscript[$CellContext`r, 12]] >= 0]]], SelectWithContents -> True,
+      Selectable -> False]},
+   "ConditionalExpression"], "]"}]], "Input",
+ CellChangeTimes->{{3.939662127152158*^9, 3.939662133111106*^9}, {
+  3.9396633513125067`*^9, 3.939663357527248*^9}},
+ CellLabel->
+  "In[219]:=",ExpressionUUID->"3e6aadcc-3989-4219-82d4-932f0cd631fb"],
+
+Cell[BoxData[
+ TemplateBox[{
+   RowBox[{
+     FractionBox["1", "12"], " ", "\[Pi]", " ", 
+     RowBox[{"(", 
+       RowBox[{
+         RowBox[{"16", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+              SuperscriptBox["\[Sigma]", "2"], ")"}], 
+            RowBox[{"3", "/", "2"}]]}], "-", 
+         RowBox[{"12", " ", 
+           SuperscriptBox["\[Sigma]", "2"], " ", 
+           SubscriptBox["r", "12"]}], "+", 
+         RowBox[{"3", " ", 
+           SubsuperscriptBox["r", "12", "3"]}], "-", 
+         RowBox[{"2", " ", 
+           SuperscriptBox[
+            RowBox[{"(", 
+              SubsuperscriptBox["r", "12", "2"], ")"}], 
+            RowBox[{"3", "/", "2"}]]}]}], ")"}]}], 
+   InterpretationBox[
+    DynamicModuleBox[{Typeset`open = False}, 
+     TemplateBox[{"Expression", 
+       StyleBox[
+        TagBox[
+         TooltipBox["\"condition\"", 
+          TagBox[
+           RowBox[{
+             RowBox[{
+               SuperscriptBox[
+                RowBox[{"Im", "[", "\[Sigma]", "]"}], "2"], "\[LessEqual]", 
+               SuperscriptBox[
+                RowBox[{"Re", "[", "\[Sigma]", "]"}], "2"]}], "&&", 
+             RowBox[{
+               SuperscriptBox[
+                RowBox[{"Im", "[", 
+                  SubscriptBox["r", "12"], "]"}], "2"], "\[LessEqual]", 
+               SuperscriptBox[
+                RowBox[{"Re", "[", 
+                  SubscriptBox["r", "12"], "]"}], "2"]}], "&&", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[Sigma]", "2"]}], "-", 
+                    SubsuperscriptBox["r", "12", "2"]}]]], "\[NotElement]", 
+                   TemplateBox[{}, "Reals"]}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"2", " ", 
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}]}], 
+                    "-", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}]}]]], 
+                    "]"}]}], ">", "1"}], "&&", 
+                    RowBox[{"(", 
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], 
+                    ")"}]}], ")"}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    SuperscriptBox["\[Sigma]", "2"]}], "-", 
+                    SubsuperscriptBox["r", "12", "2"]}]]], "]"}], 
+                    "\[LessEqual]", 
+                    RowBox[{"-", 
+                    FractionBox["1", "2"]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{"Re", "[", 
+                    FractionBox["\[Sigma]", 
+                    SqrtBox[
+                    RowBox[{
+                    SuperscriptBox["\[Sigma]", "2"], "-", 
+                    FractionBox[
+                    RowBox[{"\[LeftSkeleton]", "1", "\[RightSkeleton]"}], 
+                    "4"]}]]], "]"}], "<", 
+                    RowBox[{"-", "1"}]}]}], ")"}]}], ")"}], "&&", 
+             RowBox[{"(", 
+               RowBox[{
+                 RowBox[{
+                   SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "\[NotElement]", 
+                   TemplateBox[{}, "Reals"]}], "||", 
+                 RowBox[{
+                   RowBox[{"2", " ", 
+                    RowBox[{"Re", "[", 
+                    SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "]"}]}], 
+                   "\[GreaterEqual]", "1"}], "||", 
+                 RowBox[{
+                   RowBox[{"Re", "[", 
+                    SqrtBox[
+                    FractionBox[
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"4", " ", "\[Sigma]", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]]], "]"}], 
+                   "\[LessEqual]", "0"}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], "\[GreaterEqual]", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "+", 
+                    RowBox[{
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], ")"}], " ", 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]}], "\[LessEqual]", 
+                    "0"}]}], ")"}], "||", 
+                 RowBox[{"(", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"4", " ", 
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}]}], "\[LessEqual]", 
+                    RowBox[{
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], "&&", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"(", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "+", 
+                    RowBox[{
+                    RowBox[{"Re", "[", "\[Sigma]", "]"}], " ", 
+                    RowBox[{"Re", "[", 
+                    SubscriptBox["r", "12"], "]"}]}]}], ")"}], " ", 
+                    RowBox[{"Re", "[", 
+                    RowBox[{
+                    RowBox[{"\[Sigma]", " ", 
+                    RowBox[{"Im", "[", 
+                    SubscriptBox["r", "12"], "]"}]}], "-", 
+                    RowBox[{
+                    RowBox[{"Im", "[", "\[Sigma]", "]"}], " ", 
+                    SubscriptBox["r", "12"]}]}], "]"}]}], "\[GreaterEqual]", 
+                    "0"}]}], ")"}]}], ")"}]}], Short[#, 7]& ]], 
+         Annotation[#, 
+          Short[
+           And[
+           Im[$CellContext`\[Sigma]]^2 <= Re[$CellContext`\[Sigma]]^2, Im[
+               Subscript[$CellContext`r, 12]]^2 <= Re[
+               Subscript[$CellContext`r, 12]]^2, 
+            Or[
+             
+             NotElement[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                Subscript[$CellContext`r, 12]^2)^Rational[-1, 2], Reals], 
+             And[
+             2 Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                   Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] > 1, 
+              Or[
+              Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                   Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                  Rational[-1, 2]] >= 1, 
+               Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                   Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                  Rational[-1, 2]] == 0]], 
+             And[
+             Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+                  Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] <= 
+              Rational[-1, 2], 
+              Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+                  Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+                 Rational[-1, 2]] < -1]], 
+            Or[
+             
+             NotElement[(
+               Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+                   Subscript[$CellContext`r, 12]] 
+                 Subscript[$CellContext`r, 12]]))^Rational[1, 2], Reals], 
+             2 Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                  Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - 
+                   Im[
+                    Subscript[$CellContext`r, 12]] 
+                   Subscript[$CellContext`r, 12]]))^Rational[1, 2]] >= 1, 
+             Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+                 Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+                    Subscript[$CellContext`r, 12]] 
+                  Subscript[$CellContext`r, 12]]))^Rational[1, 2]] <= 0, 
+             And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] >= Im[
+                 Subscript[$CellContext`r, 12]] Re[
+                 Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+                   Subscript[$CellContext`r, 12]] + 
+                Re[$CellContext`\[Sigma]] Re[
+                   Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+                    Subscript[$CellContext`r, 12]] - 
+                 Im[$CellContext`\[Sigma]] Subscript[$CellContext`r, 12]] <= 
+              0], 
+             And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] <= Im[
+                 Subscript[$CellContext`r, 12]] Re[
+                 Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+                   Subscript[$CellContext`r, 12]] + 
+                Re[$CellContext`\[Sigma]] Re[
+                   Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+                    Subscript[$CellContext`r, 12]] - 
+                 Im[$CellContext`\[Sigma]] Subscript[$CellContext`r, 12]] >= 
+              0]]], 7], "Tooltip"]& ], "IconizedCustomName", StripOnInput -> 
+        False], 
+       GridBox[{{
+          RowBox[{
+            TagBox["\"Head: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            TagBox["And", "IconizedItem"]}]}, {
+          RowBox[{
+            TagBox["\"Byte count: \"", "IconizedLabel"], "\[InvisibleSpace]", 
+            
+            TagBox["11600", "IconizedItem"]}]}}, 
+        GridBoxAlignment -> {"Columns" -> {{Left}}}, DefaultBaseStyle -> 
+        "Column", 
+        GridBoxItemSize -> {
+         "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
+       Dynamic[Typeset`open]}, "IconizedObject"]], 
+    And[Im[$CellContext`\[Sigma]]^2 <= Re[$CellContext`\[Sigma]]^2, Im[
+        Subscript[$CellContext`r, 12]]^2 <= Re[
+        Subscript[$CellContext`r, 12]]^2, 
+     Or[
+      NotElement[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+         Subscript[$CellContext`r, 12]^2)^Rational[-1, 2], Reals], 
+      And[
+      2 Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+            Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] > 1, 
+       Or[
+       Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+            Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] >= 
+        1, Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+            Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] == 
+        0]], 
+      And[
+      Re[$CellContext`\[Sigma] (4 $CellContext`\[Sigma]^2 - 
+           Subscript[$CellContext`r, 12]^2)^Rational[-1, 2]] <= 
+       Rational[-1, 2], 
+       Re[$CellContext`\[Sigma] ($CellContext`\[Sigma]^2 + 
+           Rational[-1, 4] Subscript[$CellContext`r, 12]^2)^
+          Rational[-1, 2]] < -1]], 
+     Or[
+      NotElement[(
+        Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+         Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+            Subscript[$CellContext`r, 12]] Subscript[$CellContext`r, 12]]))^
+       Rational[1, 2], Reals], 
+      2 Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+           Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+              Subscript[$CellContext`r, 12]] Subscript[$CellContext`r, 12]]))^
+         Rational[1, 2]] >= 1, 
+      Re[(Im[$CellContext`\[Sigma]] (Re[$CellContext`\[Sigma]]/
+          Re[(4 $CellContext`\[Sigma]) Im[$CellContext`\[Sigma]] - Im[
+             Subscript[$CellContext`r, 12]] Subscript[$CellContext`r, 12]]))^
+        Rational[1, 2]] <= 0, 
+      And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] >= Im[
+          Subscript[$CellContext`r, 12]] Re[
+          Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+            Subscript[$CellContext`r, 12]] + Re[$CellContext`\[Sigma]] Re[
+            Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+             Subscript[$CellContext`r, 12]] - Im[$CellContext`\[Sigma]] 
+          Subscript[$CellContext`r, 12]] <= 0], 
+      And[(4 Im[$CellContext`\[Sigma]]) Re[$CellContext`\[Sigma]] <= Im[
+          Subscript[$CellContext`r, 12]] Re[
+          Subscript[$CellContext`r, 12]], (Im[$CellContext`\[Sigma]] Im[
+            Subscript[$CellContext`r, 12]] + Re[$CellContext`\[Sigma]] Re[
+            Subscript[$CellContext`r, 12]]) Re[$CellContext`\[Sigma] Im[
+             Subscript[$CellContext`r, 12]] - Im[$CellContext`\[Sigma]] 
+          Subscript[$CellContext`r, 12]] >= 0]]], SelectWithContents -> True, 
+    Selectable -> False]},
+  "ConditionalExpression"]], "Output",
+ CellChangeTimes->{3.939662133671339*^9, 3.939663358682148*^9},
+ CellLabel->
+  "Out[219]=",ExpressionUUID->"cfee0813-cfc7-4f32-93b4-28100a265f2e"]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.939672173387806*^9, 3.939672346532743*^9}, {
+   3.939672561408065*^9, 3.939672594455545*^9}, 3.939672768873765*^9, 
+   3.939672820225807*^9, {3.939672874658709*^9, 3.939672879774494*^9}, 
+   3.939683126920195*^9},
+ CellLabel->
+  "In[233]:=",ExpressionUUID->"62703d14-a929-4922-bd17-89d7425c18c0"]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (July 24, 2023)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "Users", "user", 
+   "Documents", "Wolfram Mathematica", "wolfram-notebooks"}, "Dracula.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"3dea1ab8-65cb-46d6-8255-30ae3fd7512b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 1118, 32, 48, "Input",ExpressionUUID->"55bf5c88-5b7a-4cd5-93be-cbd62ee00411"],
+Cell[1701, 56, 15634, 334, 59, "Output",ExpressionUUID->"320c5eab-a8d1-4752-9f4b-ba5572a6d040"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17372, 395, 15981, 342, 74, "Input",ExpressionUUID->"3e6aadcc-3989-4219-82d4-932f0cd631fb"],
+Cell[33356, 739, 15585, 333, 59, "Output",ExpressionUUID->"cfee0813-cfc7-4f32-93b4-28100a265f2e"]
+}, Open  ]],
+Cell[48956, 1075, 345, 6, 78, "Input",ExpressionUUID->"62703d14-a929-4922-bd17-89d7425c18c0"]
+}
+]
+*)
+
